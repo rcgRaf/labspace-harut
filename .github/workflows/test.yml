@@ -1,0 +1,12 @@
+on: 
+  push
+jobs:
+  send_slack_message:
+    name: send_slack_message
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      uses: distributhor/workflow-webhook@v1
+      env:
+        webhook_url: https://webhook.site/c0f92037-878c-4de2-9081-d4bb73d31a30
+        webhook_secret:
