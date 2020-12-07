@@ -1,12 +1,15 @@
 on: 
   push
 jobs:
-  send_slack_message:
-    name: send_slack_message
+  start:
     runs-on: ubuntu-latest
     steps:
-    - name: Print a greeting
-      uses: distributhor/workflow-webhook@v1
-      env:
-        webhook_url: https://webhook.site/c0f92037-878c-4de2-9081-d4bb73d31a30
-        webhook_secret:
+      - uses: actions/checkout@v2
+      - name: send_slack_message      
+        run: sh ./.github/scripts/slack_send_message.sh
+        env:
+          slack_app_token: ${{ secrets.SLACK_EVILBOT_TOKEN }}
+      - name: create_jira_ticket
+        run: sh ./.github/scripts/create_jira_ticket.sh
+        env:
+          jira_user_token: ${{ secrets.JIRA_TOKEN }}
