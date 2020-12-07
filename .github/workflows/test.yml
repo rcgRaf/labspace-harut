@@ -1,14 +1,14 @@
 on: 
   #push:
   #    - main
-  pull_request:
+  issue_comment:
     branches:
       - main
 
 jobs:
-  start:
+  start:    
+    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
-    if: github.event.issue.pull_request
     steps:
       - uses: actions/checkout@v2
       - name: send_slack_message      
