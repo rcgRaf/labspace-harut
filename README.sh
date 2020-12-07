@@ -11,7 +11,7 @@ exit 0
 
 # Export Variables
 #
-export PROJECT_NAME="labspace"
+export PROJECT_NAME="labspace-harut"
 export SPACE="Labspace"
 export USER_WSL="$USER"
 export USER_WIN="$(whoami.exe | cut -d '\' -f 2 | tr -d '\n' | tr -d '\r')"
@@ -79,7 +79,7 @@ wsl.exe -t $WSL_DISTRO_NAME
 
 # Export Variables
 #
-export PROJECT_NAME="labspace"
+export PROJECT_NAME="labspace-harut"
 export SPACE="Labspace"
 export USER_WSL="$USER"
 export USER_WIN="$(whoami.exe | cut -d '\' -f 2 | tr -d '\n' | tr -d '\r')"
@@ -144,7 +144,7 @@ wsl.exe -t $WSL_DISTRO_NAME
 
 # Export Variables
 #
-export PROJECT_NAME="labspace"
+export PROJECT_NAME="labspace-harut"
 export SPACE="Labspace"
 export USER_WSL="$USER"
 export USER_WIN="$(whoami.exe | cut -d '\' -f 2 | tr -d '\n' | tr -d '\r')"
@@ -178,7 +178,7 @@ git config --unset core.ignorecase
 
 # Export Variables
 #
-export PROJECT_NAME="labspace"
+export PROJECT_NAME="labspace-harut"
 export SPACE="Labspace"
 export USER_WSL="$USER"
 export USER_WIN="$(whoami.exe | cut -d '\' -f 2 | tr -d '\n' | tr -d '\r')"
@@ -239,7 +239,7 @@ ssh-load-linux
 
 # Export Variables
 #
-export PROJECT_NAME="labspace"
+export PROJECT_NAME="labspace-harut"
 export SPACE="Labspace"
 export USER_WSL="$USER"
 export USER_WIN="$(whoami.exe | cut -d '\' -f 2 | tr -d '\n' | tr -d '\r')"
