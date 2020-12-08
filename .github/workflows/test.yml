@@ -7,11 +7,11 @@ on:
 
 jobs:
   start:    
-    if: ${{ github.event.issue.pull_request }}
+    if: ${{ github.event.issue.pull_request && github.event.comment.body == "mekerku"}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: send_slack_message      
+      - name: send_slack_message   
         run: sh ./.github/scripts/slack_send_message.sh
         env:
           slack_app_token: ${{ secrets.SLACK_EVILBOT_TOKEN }}
