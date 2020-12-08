@@ -1,6 +1,4 @@
-export PR_json=$(curl \
+echo "PR_json=$(curl \
   -H "Authorization: token $git_token" \
   -H "Accept: application/vnd.github.v3+json" \
-  https://api.github.com/repos/thekord92/labspace-harut/pulls/$pr_id)
-
-echo $PR_json
+  https://api.github.com/repos/thekord92/labspace-harut/pulls/$pr_id)" >> $GITHUB_ENV
