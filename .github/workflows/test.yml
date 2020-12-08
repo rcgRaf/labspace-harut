@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: get_pull_request
         env:
-          PR_content: ${{ toJson(github.event) }}
-        run: echo $PR_content
+          PR_content: ${{ github.event }}
+        run: echo $PR_content.action
       - name: send_slack_message   
         run: sh ./.github/scripts/slack_send_message.sh
         env:
