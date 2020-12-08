@@ -1,0 +1,4 @@
+run: sh ./.github/scripts/get_pr_as_json.sh
+        env:
+          pr_id: ${{ github.event.issue.number }}
+          git_token: ${{ secrets.GIT_TOKEN }}
