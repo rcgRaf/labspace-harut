@@ -14,7 +14,7 @@ jobs:
       - name: get_pull_request
         env:
           PR_content: ${{ toJson(github.event) }}
-        run: echo ${{ PR_content }}
+        run: echo $PR_content
       - name: send_slack_message   
         run: sh ./.github/scripts/slack_send_message.sh
         env:
